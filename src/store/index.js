@@ -1,7 +1,18 @@
-import {createStore} from 'react-redux'
+import { configureStore } from '@reduxjs/toolkit';
+import storage from 'redux-persist/lib/storage';
+import { persistReducer } from 'redux-persist';
 
-function user (state,action){
-    switch(action.type){
-        case
-    }
-}
+import userReducer from '../features/user';
+
+const persistConfig = {
+    key: 'root',
+    storage
+};
+
+const persistedReducer = persistReducer(persistConfig, userReducer);
+
+const store = configureStore({
+    reducer: { user: persistedReducer },
+});
+
+export default store;

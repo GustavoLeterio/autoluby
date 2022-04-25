@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 export const Main = styled.main`
     display: flex;
 `
@@ -48,26 +49,6 @@ export const Fieldset = styled.fieldset`
         font-weight: 600;
     }
 
-    & input{
-        margin-bottom: 2.77vh ;
-        width: calc(100% - 30px);
-        outline: none;
-        color: var(--light-gray);
-        font-weight: 400;
-        border: 1px solid var(--input-border);
-        background-color: var(--input-background);
-        font-size: .8125rem;
-        padding: 10px 15px;
-    }
-
-    & input[type="text"], & input[type="password"]{
-        margin-top:.45rem;
-        font-family: 'poppins', sans-serif;
-        font-weight: 400;
-        color: var(--light-gray);
-    }
-
-
     & input[type="submit" i]{
         width: 100%;
         cursor: pointer;
@@ -81,6 +62,52 @@ export const Fieldset = styled.fieldset`
         margin-bottom: 4.111vh;
     }
 `
+
+export const InputField = styled.div`
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.77vh;
+    width: calc(100% - 30px);
+    color: var(--gray);
+    font-weight: 600;
+    border: ${(props) => props.auth.border};
+    font-size: .8125rem;
+    padding: 10px 15px;
+    transition: 0.5s ease-in-out;
+
+    & input{
+        max-width: 90%;
+        margin:0;
+        padding: 0;
+        outline: none;
+        border: none;
+        font-family: 'poppins', sans-serif;
+        font-weight: 600;
+        color: ${(props) => props.auth.inputColor};
+        box-shadow: 0 0 0px 1000px #ffffff inset !important; //Remove Autofill background
+    }
+    & input::placeholder{
+        font-weight: 400;
+    }
+
+
+    & span{
+        font-size: .8rem;
+        color: ${(props) => props.auth.messageColor};
+        position: absolute;
+        z-index: 1;
+        background-color: white;
+        opacity: ${(props) => props.auth.fontOpacity};
+    }
+
+    & img{
+        width: 14px;
+        height: 14px;
+        opacity: ${(props) => props.auth.iconOpacity};
+    }
+`
+
 export const Settings = styled.div`
     display: flex;
     flex-direction: row;
@@ -95,6 +122,7 @@ export const Settings = styled.div`
         cursor: pointer;
 
     }
+
     & label input{
         width: auto;
         cursor: pointer;
@@ -109,6 +137,7 @@ export const Signup = styled.p`
     color: var(--gray);
     font-weight: 500;
     font-size: .875rem;
+    
 `
 
 export const BgImage = styled.img`

@@ -23,6 +23,9 @@ export const GlobalStyles = createGlobalStyle`
 p,h1{
   margin:0;
 }
+img{
+  user-drag: none;
+}
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;

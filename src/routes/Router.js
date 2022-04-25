@@ -1,12 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "../pages/Login";
+import Dashboard from "../pages/Dashboard";
+
 
 
 const Router = () => {
     return (
         <Routes>
-            <Route element={<Login />} path="/" exact />
-            <Route element={<Login />} path="/myspace" exact />
+            <Route element={<Login />} path="/login" exact />
+            <Route element={<Dashboard />} path="/dashboard" exact />
         </Routes >
     )
 }

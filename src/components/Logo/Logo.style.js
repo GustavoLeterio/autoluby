@@ -6,5 +6,6 @@ export const StyledLogo = styled.div`
     gap: 1.45rem;
     font-size: 2.375rem;
     color: var(--primary-red);
-    margin:${(props)=>props.margin};
+    margin:${(props) => props.margin};
+    user-select: none;
 `
