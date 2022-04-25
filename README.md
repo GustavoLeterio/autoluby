@@ -6,7 +6,7 @@ Este projeto foi criado utilizando React.JS
 
 - ###### [Sobre](#Sobre)
 
-- [Tabela de Conteúdos](#tabela-de-conteúdos)
+- [Tabela de Conteúdos](#-tabela-de-conteúdos)
 
 - [Instalação](#instalacao)
 
