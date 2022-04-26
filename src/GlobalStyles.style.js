@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
   --confirmation: #34C38F;
   --error: #FA982F;
   --alert: #FAC12F;
+  --header-height: 9vh;
 }
 
 * {
@@ -20,17 +21,13 @@ export const GlobalStyles = createGlobalStyle`
   letter-spacing: -0.03rem;
   line-height: 120%;
 }
-p,h1{
-  margin:0;
-}
-img{
-  user-drag: none;
-}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:var(--dark-gray)
 }
 
 code {
@@ -38,7 +35,14 @@ code {
     monospace;
 }
 
-.link{
+p,h1,h2,h3{
+  margin:0;
+}
+a {
   text-decoration: none;
+}
+
+img{
+  user-drag: none;
 }
 `

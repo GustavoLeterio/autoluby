@@ -11,7 +11,7 @@ function Header({ mod }) {
 
     if (mod !== "/login") return (
         <StyledHeader>
-            <Logo props="header" />
+            <Link to="/"><Logo props="header" /></Link>
             <SearchBox display={mod !== "/dashboard" ? "none" : "flex"}>
                 <Input type="text" />
                 <Icon src={search} alt="Search icon" />

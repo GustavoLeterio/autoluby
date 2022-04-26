@@ -18,9 +18,7 @@ function Login() {
     const userSelector = useSelector((state) => state.user.value);
 
     useEffect(() => {
-        if (userSelector.token) {
-            navigate("/dashboard");
-        }
+        if (userSelector.token) navigate("/dashboard");
     });
 
     if (userSelector.token) return;
@@ -116,13 +114,13 @@ function Login() {
                             </label>
                             <Settings>
                                 <label ><input type="checkbox" name="remember" />Lembrar minha senha</label>
-                                <Link className="link" to="/">Esqueceu a senha?</Link>
+                                <Link to="/">Esqueceu a senha?</Link>
                             </Settings>
                             <input type="submit" value="Entrar" />
                         </Fieldset>
                         <Signup>
                             Ainda não possui uma conta?
-                            <Link className="link" to="/"> Criar Conta</Link>
+                            <Link to="/"> Criar Conta</Link>
                         </Signup>
                     </form>
                 </Content>

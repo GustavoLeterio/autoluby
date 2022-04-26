@@ -28,7 +28,6 @@ export const TextWrapper = styled.section`
     & h1{
         font-size: 2.375rem;
         margin-bottom: 6px;
-        color: var(--dark-gray);
     }
     & p{
         margin: 0;
@@ -53,13 +52,23 @@ export const Fieldset = styled.fieldset`
         width: 100%;
         cursor: pointer;
         padding: 10px 0;
-        background-color: var(--primary-red) ;
+        background-color: var(--primary-red);
         border: none;
         color: white;
         font-size: .875rem;
         font-weight: 600;
         font-family: 'Poppins', sans-serif;
         margin-bottom: 4.111vh;
+        transition: ease-in-out 200ms;
+    }
+    & input[type="submit" i]:hover{
+        background-color: var(--hover-red);
+    }
+    & input[type="submit" i]:focus{
+        transition: ease-in-out 0ms;
+        background-color: var(--hover-red);
+        box-shadow: inset 0 0 0px 2px var(--stroke-pressed-red);
+        border-radius: 3px;
     }
 `
 
@@ -74,7 +83,7 @@ export const InputField = styled.div`
     border: ${(props) => props.auth.border};
     font-size: .8125rem;
     padding: 10px 15px;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     & input{
         max-width: 90%;
@@ -131,13 +140,18 @@ export const Settings = styled.div`
         margin: 0 0.85rem 0 5px;
         transform: scale(1.8);
     }
+    & a{
+        color:var(--primary-red);
+    }    
 `
 
 export const Signup = styled.p`
     color: var(--gray);
     font-weight: 500;
     font-size: .875rem;
-    
+    & a{
+        color:var(--primary-red);
+    }    
 `
 
 export const BgImage = styled.img`
